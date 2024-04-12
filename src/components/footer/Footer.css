@@ -1,0 +1,43 @@
+.footer {
+    background-color: black;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .social-icons {
+    margin-bottom: 10px;
+  }
+  
+  .icon-link {
+    color: #fff;
+    font-size: 24px;
+    margin: 0 15px;
+    transition: opacity 0.3s ease;
+  }
+  
+  .icon-link:hover {
+    opacity: 0.8;
+  }
+  
+  .facebook-icon {
+    color: #3b5998;
+  }
+  
+  .instagram-icon {
+    color: #e4405f;
+  }
+  
+  .linkedin-icon {
+    color: #0077b5;
+  }
+  
+  .github-icon {
+    color: #333;
+  }
+  
+  .watermark {
+    font-size: 14px;
+    color: #ccc;
+  }
+  
