@@ -6,9 +6,8 @@ import javaImg from '../img/java.png';
 
 function Body() {
     return (
-        <main>
-            {/* Sección Sobre Mí */}
-            <section className="seccion-sobre-mi">
+        <div>
+            <section className="seccion-sobre-mi" id='seccion-sobre-mi'>
                 <div className="contenido-sobre-mi">
                     <h2>Sobre mí</h2>
                     <p>
@@ -46,8 +45,8 @@ function Body() {
                 </div>
             </section>
 
-            {/* Sección Servicios */}
-            <section className="seccion-servicios">
+
+            <section className="seccion-servicios" id='seccion-servicios'>
                 <h2>Servicios</h2>
                 <p>
                     Ofrezco una variedad de servicios en el campo del desarrollo de software y diseño de interfaces de usuario. Mis habilidades incluyen:
@@ -88,32 +87,43 @@ function Body() {
                 </div>
             </section>
 
-            <section className="seccion-proyectos">
-  <div className="contenedor-proyectos">
-    <h3 className="titulo-proyectos">Mis Proyectos Personales</h3>
-    <div className="grid-proyectos">
-      <div className="proyecto-proyecto">
-        <div className="color-fondo-rojo"></div>
-        <div className="contenido-proyecto">
-          <h4 className="titulo-proyecto">Glosario de palabras Español-Inglés</h4>
-          <p className="descripcion-proyecto">Este proyecto consiste en un glosario interactivo que ayuda a traducir palabras del español al inglés y viceversa. Utiliza una interfaz sencilla y amigable para el usuario, permitiendo buscar y explorar palabras fácilmente.</p>
-          <a href="https://ingles.onrender.com/" className="enlace-proyecto" target="_blank" rel="noopener noreferrer">Ver proyecto</a>
-        </div>
-      </div>
-      <div className="proyecto-proyecto">
-        <div className="color-fondo-negro"></div>
-        <div className="contenido-proyecto">
-          <h4 className="titulo-proyecto">Tienda Virtual SoccerWorld</h4>
-          <p className="descripcion-proyecto">La tienda virtual SoccerWorld es un proyecto de comercio electrónico dedicado a la venta de productos relacionados con el fútbol. Permite a los usuarios registrarse, iniciar sesión y realizar compras de manera segura y conveniente.</p>
-          <a href="https://soccerworld.onrender.com/" className="enlace-proyecto" target="_blank" rel="noopener noreferrer">Ver proyecto</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+            <section className="seccion-proyectos" id='seccion-proyectos'>
+                <div className="contenedor-proyectos">
+                    <h3 className="titulo-proyectos">Mis Proyectos Personales</h3>
+                    <div className="grid-proyectos">
+                        <div className="proyecto-proyecto">
+                            <div className="color-fondo-rojo"></div>
+                            <div className="contenido-proyecto">
+                                <h4 className="titulo-proyecto">Glosario de palabras Español-Inglés</h4>
+                                <p className="descripcion-proyecto">Este proyecto consiste en un glosario interactivo que ayuda a traducir palabras del español al inglés y viceversa. Utiliza una interfaz sencilla y amigable para el usuario, permitiendo buscar y explorar palabras fácilmente.</p>
+                                <a href="https://ingles.onrender.com/" className="enlace-proyecto" target="_blank" rel="noopener noreferrer">Ver proyecto</a>
+                            </div>
+                        </div>
+                        <div className="proyecto-proyecto">
+                            <div className="color-fondo-negro"></div>
+                            <div className="contenido-proyecto">
+                                <h4 className="titulo-proyecto">Tienda Virtual SoccerWorld</h4>
+                                <p className="descripcion-proyecto">La tienda virtual SoccerWorld es un proyecto de comercio electrónico dedicado a la venta de productos relacionados con el fútbol. Permite a los usuarios registrarse, iniciar sesión y realizar compras de manera segura y conveniente.</p>
+                                <a href="https://soccerworld.onrender.com/" className="enlace-proyecto" target="_blank" rel="noopener noreferrer">Ver proyecto</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-
-        </main>
+            <section id='seccion-contacto' className='seccion-contacto'>
+            <div className="cont-contacto">
+                <h2>Contacto</h2>
+                <p>Puedes contactarme por teléfono o correo electrónico:</p>
+                <ul>
+                    <li>
+                        <p><strong>Teléfono:</strong> +573207512575</p>
+                        <p><strong>Email:</strong> juancamilog9911@gmail.com</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        </div>
     );
 }
 

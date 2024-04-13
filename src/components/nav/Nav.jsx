@@ -8,10 +8,11 @@ function Navegacion() {
                 <div className="contenedor-con-sombra">
                     <img className='logo' src={logo} alt="" />
                     <div className="enlaces">
-                        <a className="enlace " aria-current="page" href="#">Inicio</a>
-                        <a className="enlace" href="#">Sobre mí</a>
-                        <a className="enlace" href="#">Proyectos</a>
-                        <a className="enlace " aria-disabled="true">Contacto</a>
+                        <a className="enlace " aria-current="page" href="#Header">Inicio</a>
+                        <a className="enlace" href="#seccion-sobre-mi">Sobre mí</a>
+                        <a className="enlace" href="#seccion-servicios">Servivios</a>
+                        <a className="enlace" href="#seccion-proyectos">Proyectos</a>
+                        <a className="enlace " aria-disabled="true" href="#seccion-contacto">Contacto</a>
                     </div>
                 </div>
             </nav>
