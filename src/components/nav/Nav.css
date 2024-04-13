@@ -46,22 +46,29 @@
     gap: 10px;
 }
 
+/* Estilos para el nav en dispositivos móviles */
 @media only screen and (max-width: 710px) {
-    .contenedor-con-sombra{
-        position: fixed;
+    .contenedor-con-sombra {
+        position: fixed; /* Mantener fijo en la parte superior de la pantalla */
+        flex-direction: column; /* Cambiar la dirección de los elementos a columna */
+        padding: 10px; /* Reducir el espacio entre el borde y los elementos */
+        border-radius: 0; /* Quitar el borde redondeado */
+        box-shadow: none; /* Quitar la sombra */
+        background-color: #000; /* Cambiar el color de fondo */
     }
-    
+
     .enlaces {
-        flex-direction: row;
-        align-items: center;
-        gap: 10px;
-        width: 90%; /* Asegura que los enlaces ocupen todo el ancho */
-        
+        margin: 0px 0px;
+        width: 160%; /* Asegurar que ocupe todo el ancho */
+        flex-direction: row; /* Cambiar la dirección de los elementos a columna */
+        align-items: center; /* Centrar los elementos */
+        gap: 10px; /* Espacio entre los elementos */
     }
 
     .enlace {
-        width: 100%; /* Asegura que los enlaces ocupen todo el ancho */
-        text-align: center; /* Centra el texto */
+        width: auto; /* Ajustar el ancho automáticamente */
+        padding: 10px 20px; /* Ajustar el relleno */
+        text-align: center; /* Centrar el texto */
     }
+    
 }
-

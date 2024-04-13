@@ -1,8 +1,12 @@
-import './Body.css';
-
-
+import '../body/Body.css';
 import javaImg from '../img/java.png';
-
+import htmlImg from '../img/html-5.png';
+import jsImg from '../img/js.png';
+import cssImg from '../img/css.png';
+import cImg from '../img/letra-c.png';
+import dartImg from '../img/dart.png';
+import githubImg from '../img/github.png';
+import linkedinImg from '../img/linkedin.png';
 
 function Body() {
     return (
@@ -19,15 +23,15 @@ function Body() {
                 <div className="lenguajes">
                     <h3>Lenguajes</h3>
                     <div className="contenedor-img">
-                        <img src={javaImg} alt="HTML" />
+                        <img src={htmlImg} alt="HTML" />
                         <span>HTML: Lenguaje de marcado utilizado para estructurar el contenido de las páginas web.</span>
                     </div>
                     <div className="contenedor-img">
-                        <img src={javaImg} alt="CSS" />
+                        <img src={cssImg} alt="CSS" />
                         <span>CSS: Lenguaje de estilos utilizado para darle formato y diseño a las páginas web.</span>
                     </div>
                     <div className="contenedor-img">
-                        <img src={javaImg} alt="JavaScript" />
+                        <img src={jsImg} alt="JavaScript" />
                         <span>JavaScript: Lenguaje de programación utilizado para crear interactividad en las páginas web.</span>
                     </div>
                     <div className="contenedor-img">
@@ -35,12 +39,12 @@ function Body() {
                         <span>Java: Lenguaje de programación orientado a objetos utilizado en el desarrollo de aplicaciones de escritorio y web.</span>
                     </div>
                     <div className="contenedor-img">
-                        <img src={javaImg} alt="C" />
-                        <span>C: Lenguaje de programación de bajo nivel utilizado para desarrollar sistemas operativos y aplicaciones de alto rendimiento.</span>
+                        <img src={cImg} alt="C" />
+                        <span>Lenguaje C: Lenguaje de programación de bajo nivel utilizado para desarrollar sistemas operativos y aplicaciones de alto rendimiento.</span>
                     </div>
                     <div className="contenedor-img">
-                        <img src={javaImg} alt="DARK" />
-                        <span>DARK: Breve descripción del lenguaje DARK.</span>
+                        <img src={dartImg} alt="DARK" />
+                        <span>DART: Breve descripción del lenguaje DARK.</span>
                     </div>
                 </div>
             </section>
@@ -96,7 +100,9 @@ function Body() {
                             <div className="contenido-proyecto">
                                 <h4 className="titulo-proyecto">Glosario de palabras Español-Inglés</h4>
                                 <p className="descripcion-proyecto">Este proyecto consiste en un glosario interactivo que ayuda a traducir palabras del español al inglés y viceversa. Utiliza una interfaz sencilla y amigable para el usuario, permitiendo buscar y explorar palabras fácilmente.</p>
-                                <a href="https://ingles.onrender.com/" className="enlace-proyecto" target="_blank" rel="noopener noreferrer">Ver proyecto</a>
+                                <button className='btnLink'>
+                                    <a href="https://ingles.onrender.com/" target='_blank'> Click</a>
+                                </button>
                             </div>
                         </div>
                         <div className="proyecto-proyecto">
@@ -104,7 +110,9 @@ function Body() {
                             <div className="contenido-proyecto">
                                 <h4 className="titulo-proyecto">Tienda Virtual SoccerWorld</h4>
                                 <p className="descripcion-proyecto">La tienda virtual SoccerWorld es un proyecto de comercio electrónico dedicado a la venta de productos relacionados con el fútbol. Permite a los usuarios registrarse, iniciar sesión y realizar compras de manera segura y conveniente.</p>
-                                <a href="https://soccerworld.onrender.com/" className="enlace-proyecto" target="_blank" rel="noopener noreferrer">Ver proyecto</a>
+                                <button  className='btnLink'>
+                                    <a href="https://soccerworld.onrender.com/">Click</a>
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -112,17 +120,27 @@ function Body() {
             </section>
 
             <section id='seccion-contacto' className='seccion-contacto'>
-            <div className="cont-contacto">
+
                 <h2>Contacto</h2>
                 <p>Puedes contactarme por teléfono o correo electrónico:</p>
-                <ul>
+                <ul className="contacto-lista">
                     <li>
                         <p><strong>Teléfono:</strong> +573207512575</p>
                         <p><strong>Email:</strong> juancamilog9911@gmail.com</p>
+                        <div className="red-social">
+
+                            <a href="https://github.com/CXmiloxx" target='_blank'>
+                                <img src={githubImg} alt="GitHub"/>
+                            </a>
+                        </div>
+                        <div className="red-social">
+                            <a href="https://www.linkedin.com/in/camilo-guapacha-a6732b270/" target='_blank'>
+                                <img src={linkedinImg} alt="Linkedin"/> 
+                            </a>
+                        </div>
                     </li>
                 </ul>
-            </div>
-        </section>
+            </section>
         </div>
     );
 }
