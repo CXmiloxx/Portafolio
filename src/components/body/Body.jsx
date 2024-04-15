@@ -60,8 +60,8 @@ function Body() {
                         <div className="color-fondo azul"></div>
                         <div className="contenido">
                             <span><i className='bx bx-mobile-alt'></i></span>
-                            <h3>Desarrollo de aplicaciones móviles</h3>
-                            <p>Creación de aplicaciones innovadoras para dispositivos móviles.</p>
+                            <h3>Analisis y documentacion de datos</h3>
+                            <p>Implementación de la lógica para crear proyectos y documentarlos siguiendo los principios SOLID.</p>
                         </div>
                     </div>
                     <div className="servicio">
@@ -77,15 +77,15 @@ function Body() {
                         <div className="contenido">
                             <span><i className='bx bx-code-block'></i></span>
                             <h3>Desarrollo web</h3>
-                            <p>Creación de sitios web dinámicos y funcionales con las últimas tecnologías.</p>
+                            <p>Creación de sitios web dinámicos y funcionales.</p>
                         </div>
                     </div>
                     <div className="servicio">
                         <div className="color-fondo verde"></div>
                         <div className="contenido">
                             <span><i className='bx bx-code-block'></i></span>
-                            <h3>Diseño web</h3>
-                            <p>Diseño personalizado y atractivo para sitios web adaptativos.</p>
+                            <h3>Aplicaciones</h3>
+                            <p>Creacion de aplicacion con funcionalidad con conexiones a Bases de datos</p>
                         </div>
                     </div>
                 </div>
@@ -100,9 +100,7 @@ function Body() {
                             <div className="contenido-proyecto">
                                 <h4 className="titulo-proyecto">Glosario de palabras Español-Inglés</h4>
                                 <p className="descripcion-proyecto">Este proyecto consiste en un glosario interactivo que ayuda a traducir palabras del español al inglés y viceversa. Utiliza una interfaz sencilla y amigable para el usuario, permitiendo buscar y explorar palabras fácilmente.</p>
-                                <button className='btnLink'>
-                                    <a href="https://ingles.onrender.com/" target='_blank'> Click</a>
-                                </button>
+                                    <a href="https://ingles.onrender.com/" target='_blank' className='link'>  Abrir</a>
                             </div>
                         </div>
                         <div className="proyecto-proyecto">
@@ -110,9 +108,7 @@ function Body() {
                             <div className="contenido-proyecto">
                                 <h4 className="titulo-proyecto">Tienda Virtual SoccerWorld</h4>
                                 <p className="descripcion-proyecto">La tienda virtual SoccerWorld es un proyecto de comercio electrónico dedicado a la venta de productos relacionados con el fútbol. Permite a los usuarios registrarse, iniciar sesión y realizar compras de manera segura y conveniente.</p>
-                                <button  className='btnLink'>
-                                    <a href="https://soccerworld.onrender.com/">Click</a>
-                                </button>
+                                    <a href="https://ligamerch.onrender.com" target='_blank' className='link'>Abrir</a>
                             </div>
                         </div>
                     </div>

@@ -1,7 +1,7 @@
-/* Estilos generales */
+
 body {
     font-family: Arial, sans-serif;
-    background-color: black; /* Mejora de la paleta de colores */
+    background-color: black;
     color: white;
     margin: 0;
     padding: 0;
@@ -21,7 +21,6 @@ p {
     line-height: 1.5;
 }
 
-/* Estilos para las secciones */
 .seccion-sobre-mi,
 .seccion-servicios,
 .seccion-proyectos,
@@ -33,7 +32,6 @@ p {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0);
 }
 
-/* Estilos para la sección "Sobre mí" */
 .contenido-sobre-mi {
     margin-right: 20px;
     margin: 2px;
@@ -74,7 +72,22 @@ p {
     align-items: center;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
+.link{
+    text-decoration: none;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    background-color: #0056b3;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
 
+.link:hover {
+    background-color: #c82333;
+    transition: ease 0.5s;
+    border-radius: 15px;
+}
 .servicio h3, .proyecto-proyecto h4 {
     margin-bottom: 10px;
 }
@@ -87,14 +100,6 @@ p {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-}
-.btnLink a{
-    text-decoration: none;
-    color: white;
-}
-
-.btnLink:hover {
-    background-color: #0056b3;
 }
 .seccion-contacto ul {
     list-style: none;
@@ -117,9 +122,8 @@ p {
     background-color: white;
     
 }
+@media(max-width: 768px) {
 
-/* Media Queries */
-@media only screen and (max-width: 768px) {
     main {
         padding: 50px;
     }
@@ -164,7 +168,7 @@ p {
     }
 }
 
-@media only screen and (max-width: 365px) {
+@media (max-width: 365px) {
     .grid-servicios,
     .grid-proyectos {
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
