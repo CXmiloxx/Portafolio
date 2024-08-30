@@ -1,74 +1,112 @@
-.logo {
-    width: 50px;
-    height: auto;
-    margin-right: 10px;
-}
-
-.enlace {
-    font-size: 1rem;
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    text-decoration: none;
-    padding: 10px 20px;
-    transition: background-color 0.3s ease;
-    border-radius: 5px;
-}
-
-.enlace:hover {
-    background-color: #c82333;
-}
-
-.barra-negro {
-    background-color: black;
-}
-
-.contenedor-con-sombra {
-    background-color: black;
+/* Barra de navegación */
+.barra-navegacion {
+    background-color: #000;
     position: fixed;
+    width: 100%;
     top: 0;
+    left: 0;
+    z-index: 1000;
+    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.barra-navegacion.scrolled {
+    background-color: rgba(0, 0, 0, 0.85);
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.contenedor {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-    transition: box-shadow 0.3s ease;
+    padding: 15px 30px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.contenedor-con-sombra:hover {
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.8);
+.logo {
+    width: 50px;
+    height: auto;
 }
 
 .enlaces {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 20px;
 }
 
-/* Estilos para el nav en dispositivos móviles */
-@media only screen and (max-width: 710px) {
-    .contenedor-con-sombra {
-        position: fixed; /* Mantener fijo en la parte superior de la pantalla */
-        flex-direction: column; /* Cambiar la dirección de los elementos a columna */
-        padding: 10px; /* Reducir el espacio entre el borde y los elementos */
-        border-radius: 0; /* Quitar el borde redondeado */
-        box-shadow: none; /* Quitar la sombra */
-        background-color: #000; /* Cambiar el color de fondo */
+.enlace {
+    font-size: 1rem;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border-radius: 5px;
+}
+
+.enlace:hover {
+    background-color: #c82333;
+    transform: scale(1.1);
+}
+
+/* Menú desplegable en móviles */
+.menu-toggle {
+    display: none;
+}
+
+.menu-icon {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.menu-icon span {
+    width: 25px;
+    height: 2px;
+    background-color: white;
+    transition: all 0.3s ease;
+}
+
+.menu-toggle:checked + .menu-icon span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-toggle:checked + .menu-icon span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle:checked + .menu-icon span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+.menu-toggle:checked ~ .enlaces {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.95);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 20px 0;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 768px) {
+    .menu-icon {
+        display: flex;
     }
 
     .enlaces {
-        margin: 0px 0px;
-        width: 160%; /* Asegurar que ocupe todo el ancho */
-        flex-direction: row; /* Cambiar la dirección de los elementos a columna */
-        align-items: center; /* Centrar los elementos */
-        gap: 10px; /* Espacio entre los elementos */
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        text-align: center;
+        padding: 0;
     }
 
     .enlace {
-        width: auto; /* Ajustar el ancho automáticamente */
-        padding: 10px 20px; /* Ajustar el relleno */
-        text-align: center; /* Centrar el texto */
+        width: 100%;
+        padding: 15px 0;
     }
-    
 }
