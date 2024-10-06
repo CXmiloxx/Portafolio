@@ -1,0 +1,70 @@
+.bodyContainer {
+    font-family: 'Arial', sans-serif;
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    color: #333;
+}
+
+h2, h3, h4 {
+    color: #2c3e50;
+}
+
+.sectionTitle {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.sectionText {
+    font-size: 1.25rem;
+    text-align: center;
+    line-height: 1.6;
+    color: #7f8c8d;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.lenguaje, .servicio, .proyecto {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.lenguaje:hover, .servicio:hover, .proyecto:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.colorFondo {
+    height: 60px;
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+.azul { background-color: #3498db; }
+.amarillo { background-color: #f1c40f; }
+.purpura { background-color: #9b59b6; }
+.verde { background-color: #2ecc71; }
+.rojo { background-color: #e74c3c; }
+.negro { background-color: #34495e; }
+
+.redes a {
+    margin-right: 15px;
+    font-size: 2.5rem;
+    color: #333;
+    transition: color 0.3s;
+}
+
+.redes a:hover {
+    color: #3498db;
+}

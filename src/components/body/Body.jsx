@@ -1,175 +1,102 @@
-import '../body/Body.css';
+/* eslint-disable react/prop-types */
+import styles from './Body.module.css';
 import { FaJava, FaHtml5, FaCss3Alt, FaJs, FaGithub, FaLinkedin, FaLaravel } from 'react-icons/fa';
-import { SiC, SiDart, SiPhp } from 'react-icons/si';
+import { SiC, SiPhp } from 'react-icons/si';
 import { DiReact } from 'react-icons/di';
 
 function Body() {
     return (
-        <div className="body-container">
-            <section className="seccion-sobre-mi" id='seccion-sobre-mi'>
-                <div className="contenido-sobre-mi">
-                    <h2>Sobre mí</h2>
-                    <p className='pSobre-mi'>
-                        ¡Hola! Soy Juan Camilo Guapacha, un entusiasta del desarrollo de software en formación en el SENA. Mi pasión por la tecnología me impulsa a explorar y aprender constantemente. Con experiencia en Java, C, HTML, CSS, JavaScript y PHP, así como en el uso de Android Studio y NetBeans, he creado aplicaciones móviles y de escritorio que despiertan la imaginación y desafían los límites de la innovación.
-                        Fuera del mundo del código, disfruto explorar nuevas culturas a través de la lectura y los viajes, y encuentro inspiración en el mundo del deporte.
-                        Como estudiante del SENA, estoy comprometido a enfrentar cada desafío con determinación y entusiasmo. Estoy emocionado por las oportunidades que el futuro tiene reservadas y estoy listo para contribuir al mundo del desarrollo de software con soluciones innovadoras.
-                    </p>
-                </div>
-            </section>
-
-            <section className="seccion-lenguajes" id='seccion-lenguajes'>
-                <h2>Lenguajes de Programación</h2>
-                <div className="grid-lenguajes">
-                    <div className="contenedor-img">
-                        <FaJs className="icono-lenguaje" />
-                        <span>
-                            <strong>JavaScript:</strong> Lenguaje de programación que añade interactividad a las páginas web. Esencial para el desarrollo de aplicaciones web dinámicas y para manejar eventos de usuario.
-                        </span>
-                    </div>
-                    <div className="contenedor-img">
-                        <FaJava className="icono-lenguaje" />
-                        <span>
-                            <strong>Java:</strong> Lenguaje de programación orientado a objetos ampliamente utilizado para desarrollar aplicaciones empresariales, aplicaciones de escritorio y sistemas en la web.
-                        </span>
-                    </div>
-                    <div className="contenedor-img">
-                        <SiC className="icono-lenguaje" />
-                        <span>
-                            <strong>Lenguaje C:</strong> Lenguaje de programación de bajo nivel conocido por su eficiencia y control. Utilizado para el desarrollo de sistemas operativos, software embebido y aplicaciones de alto rendimiento.
-                        </span>
-                    </div>
-                    <div className="contenedor-img">
-                        <SiDart className="icono-lenguaje" />
-                        <span>
-                            <strong>Dart:</strong> Lenguaje de programación desarrollado por Google, utilizado principalmente para desarrollar aplicaciones móviles con el framework Flutter. Ofrece una sintaxis moderna y eficiente.
-                        </span>
-                    </div>
-                    <div className="contenedor-img">
-                        <SiPhp className="icono-lenguaje" />
-                        <span>
-                            <strong>PHP:</strong> Lenguaje de programación del lado del servidor, ampliamente utilizado para el desarrollo web. Permite generar contenido dinámico y gestionar bases de datos.
-                        </span>
-                    </div>
-                </div>
-            </section>
-
-            <section className="seccion-maquetacion-estilos" id='seccion-maquetacion-estilos'>
-                <h2>Lenguajes de Maquetación y Estilo</h2>
-                <div className="grid-lenguajes">
-                    <div className="contenedor-img">
-                        <FaHtml5 className="icono-lenguaje" />
-                        <span>
-                            <strong>HTML:</strong> Lenguaje de marcado fundamental para la estructura de páginas web. Permite definir el contenido y los elementos en la web, desde encabezados hasta párrafos y enlaces.
-                        </span>
-                    </div>
-                    <div className="contenedor-img">
-                        <FaCss3Alt className="icono-lenguaje" />
-                        <span>
-                            <strong>CSS:</strong> Lenguaje de hojas de estilo que se utiliza para definir la presentación visual de las páginas web. Permite ajustar colores, fuentes, márgenes y otros aspectos de diseño.
-                        </span>
-                    </div>
-                </div>
-            </section>
-
-            <section className="seccion-frameworks" id='seccion-frameworks'>
-                <h2>Frameworks y Librerías</h2>
-                <div className="grid-frameworks">
-                    <div className="contenedor-img">
-                        <DiReact className="icono-lenguaje" />
-                        <span>
-                            <strong>React:</strong> Biblioteca de JavaScript para construir interfaces de usuario interactivas. Permite crear aplicaciones de una sola página (SPA) de manera eficiente y modular.
-                        </span>
-                    </div>
-                    <div className="contenedor-img">
-                        <FaLaravel className="icono-lenguaje" />
-                        <span>
-                            <strong>Laravel:</strong> Framework de PHP que proporciona una estructura robusta para el desarrollo de aplicaciones web. Facilita el desarrollo con herramientas como el enrutamiento, la autenticación y la gestión de bases de datos.
-                        </span>
-                    </div>
-                </div>
-            </section>
-
-            <section className="seccion-servicios" id='seccion-servicios'>
-                <h2>Servicios</h2>
-                <p>
-                    Ofrezco una variedad de servicios en el campo del desarrollo de software y diseño de interfaces de usuario. Mis habilidades incluyen:
+        <div className={styles.bodyContainer}>
+            <section className={styles.section} id="seccion-sobre-mi">
+                <h2 className={styles.sectionTitle}>Sobre mí</h2>
+                <p className={styles.sectionText}>
+                    ¡Hola! Soy Juan Camilo, desarrollador en formación con experiencia en Java, C, HTML, CSS, JavaScript y PHP. 
+                    Apasionado por la tecnología, disfruto creando aplicaciones innovadoras. Me gusta explorar nuevas culturas y deportes. 
+                    Estoy listo para contribuir al desarrollo de software con soluciones frescas e impactantes.
                 </p>
-                <div className="grid-servicios">
-                    <div className="servicio">
-                        <div className="color-fondo azul"></div>
-                        <div className="contenido">
-                            <h3>Análisis y documentación de datos</h3>
-                            <p>Implementación de la lógica para crear proyectos y documentarlos siguiendo los principios SOLID.</p>
-                        </div>
-                    </div>
-                    <div className="servicio">
-                        <div className="color-fondo amarillo"></div>
-                        <div className="contenido">
-                            <h3>Diseño de interfaces de usuario</h3>
-                            <p>Desarrollo de interfaces intuitivas y atractivas para mejorar la experiencia del usuario.</p>
-                        </div>
-                    </div>
-                    <div className="servicio">
-                        <div className="color-fondo purpura"></div>
-                        <div className="contenido">
-                            <h3>Desarrollo web</h3>
-                            <p>Creación de sitios web dinámicos y funcionales.</p>
-                        </div>
-                    </div>
-                    <div className="servicio">
-                        <div className="color-fondo verde"></div>
-                        <div className="contenido">
-                            <h3>Aplicaciones</h3>
-                            <p>Creación de aplicaciones con funcionalidad y conexiones a bases de datos.</p>
-                        </div>
-                    </div>
+            </section>
+
+            <section className={styles.section} id="lenguajes">
+                <h2 className={styles.sectionTitle}>Lenguajes de Programación</h2>
+                <div className={styles.grid}>
+                    <Lenguaje icon={<FaJs />} nombre="JavaScript" descripcion="Lenguaje para interactividad en la web." />
+                    <Lenguaje icon={<FaJava />} nombre="Java" descripcion="Orientado a objetos, ideal para apps empresariales." />
+                    <Lenguaje icon={<SiC />} nombre="C" descripcion="Eficiente y usado en sistemas de bajo nivel." />
+                    <Lenguaje icon={<SiPhp />} nombre="PHP" descripcion="Backend para contenido dinámico en la web." />
                 </div>
             </section>
 
-            <section className="seccion-proyectos" id='seccion-proyectos'>
-                <div className="contenedor-proyectos">
-                    <h3 className="titulo-proyectos">Mis Proyectos Personales</h3>
-                    <div className="grid-proyectos">
-                        <div className="proyecto-proyecto">
-                            <div className="color-fondo-rojo"></div>
-                            <div className="contenido-proyecto">
-                                <h4 className="titulo-proyecto">Glosario de palabras Español-Inglés</h4>
-                                <p className="descripcion-proyecto">Este proyecto consiste en un glosario interactivo que ayuda a traducir palabras del español al inglés y viceversa. Utiliza una interfaz sencilla y amigable para el usuario, permitiendo buscar y explorar palabras fácilmente.</p>
-                                <a href="https://ingles.onrender.com/" target='_blank' className='link'>Abrir</a>
-                            </div>
-                        </div>
-                        <div className="proyecto-proyecto">
-                            <div className="color-fondo-negro"></div>
-                            <div className="contenido-proyecto">
-                                <h4 className="titulo-proyecto">Tienda Virtual SoccerWorld</h4>
-                                <p className="descripcion-proyecto">La tienda virtual SoccerWorld es un proyecto de comercio electrónico dedicado a la venta de productos relacionados con el fútbol. Permite a los usuarios registrarse, iniciar sesión y realizar compras de manera segura y conveniente.</p>
-                                <a href="https://ligamerch.onrender.com" target='_blank' className='link'>Abrir</a>
-                            </div>
-                        </div>
-                    </div>
+            <section className={styles.section} id="maquetacion-estilos">
+                <h2 className={styles.sectionTitle}>Lenguajes de Maquetación y Estilo</h2>
+                <div className={styles.grid}>
+                    <Lenguaje icon={<FaHtml5 />} nombre="HTML" descripcion="Estructura de páginas web." />
+                    <Lenguaje icon={<FaCss3Alt />} nombre="CSS" descripcion="Estilos y diseño de sitios web." />
                 </div>
             </section>
 
-            <section id='seccion-contacto' className='seccion-contacto'>
-                <h2>Contacto</h2>
-                <p>Puedes contactarme por teléfono o correo electrónico:</p>
-                <ul className="contacto-lista">
-                    <li>
-                        <p><strong>Teléfono:</strong> +573207512575</p>
-                        <p><strong>Email:</strong> juancamilog9911@gmail.com</p>
-                        <div className="red-social">
-                            <a href="https://github.com/CXmiloxx" target='_blank'>
-                                <FaGithub className="icono-red-social" />
-                            </a>
-                            <a href="https://www.linkedin.com/in/juan-camilo-guapacha/" target='_blank'>
-                                <FaLinkedin className="icono-red-social" />
-                            </a>
-                        </div>
-                    </li>
-                </ul>
+            <section className={styles.section} id="frameworks">
+                <h2 className={styles.sectionTitle}>Frameworks y Librerías</h2>
+                <div className={styles.grid}>
+                    <Lenguaje icon={<DiReact />} nombre="React" descripcion="Biblioteca para interfaces de usuario dinámicas." />
+                    <Lenguaje icon={<FaLaravel />} nombre="Laravel" descripcion="Framework PHP para desarrollo web robusto." />
+                </div>
+            </section>
+
+            <section className={styles.section} id="seccion-servicios">
+                <h2 className={styles.sectionTitle}>Servicios</h2>
+                <div className={styles.grid}>
+                    <Servicio color="azul" titulo="Análisis y Documentación" descripcion="Aplicación de principios SOLID." />
+                    <Servicio color="amarillo" titulo="Diseño UI" descripcion="Interfaces intuitivas y estéticas." />
+                    <Servicio color="purpura" titulo="Desarrollo Web" descripcion="Sitios web funcionales y dinámicos." />
+                    <Servicio color="verde" titulo="Aplicaciones" descripcion="Apps conectadas a bases de datos." />
+                    <Servicio color="rojo" titulo="Api" descripcion="Creacion y consumo de Apis para aplicaciones." />
+
+                </div>
+            </section>
+
+            <section className={styles.section} id="seccion-proyectos">
+                <h2 className={styles.sectionTitle}>Mis Proyectos</h2>
+                <div className={styles.grid}>
+                    <Proyecto color="amarillo" titulo="Glosario Español-Inglés" descripcion="Glosario interactivo para traducción de palabras." link="https://ingles.onrender.com/" />
+                    <Proyecto color="azul" titulo="Tienda Virtual SoccerWorld" descripcion="E-commerce dedicado a productos de fútbol." link="https://ligamerch.onrender.com" />
+                    <Proyecto color="rojo" titulo="Registro de Usuarios" descripcion="Aplicación CRUD para gestión de usuarios." link="https://crudapp-h37z.onrender.com" />
+                </div>
+            </section>
+
+            <section className={styles.section} id="seccion-contacto">
+                <h2 className={styles.sectionTitle}>Contacto</h2>
+                <p className={styles.sectionText}>Teléfono: +573207512575 | Email: juancamilog9911@gmail.com</p>
+                <div className={styles.redes}>
+                    <a href="https://github.com/CXmiloxx" target="_blank" rel="noopener noreferrer"><FaGithub /></a>
+                    <a href="https://www.linkedin.com/in/juan-camilo-guapacha/" target="_blank" rel="noopener noreferrer"><FaLinkedin /></a>
+                </div>
             </section>
         </div>
     );
 }
+
+const Lenguaje = ({ icon, nombre, descripcion }) => (
+    <div className={styles.lenguaje}>
+        {icon}
+        <span><strong>{nombre}:</strong> {descripcion}</span>
+    </div>
+);
+
+const Servicio = ({ color, titulo, descripcion }) => (
+    <div className={styles.servicio}>
+        <div className={`${styles.colorFondo} ${styles[color]}`}></div>
+        <h3>{titulo}</h3>
+        <p>{descripcion}</p>
+    </div>
+);
+
+const Proyecto = ({ color, titulo, descripcion, link }) => (
+    <div className={styles.proyecto}>
+        <div className={`${styles.colorFondo} ${styles[color]}`}></div>
+        <h4>{titulo}</h4>
+        <p>{descripcion}</p>
+        <a href={link} target="_blank" rel="noopener noreferrer" className={styles.link}>Abrir</a>
+    </div>
+);
 
 export default Body;
