@@ -14,13 +14,40 @@ h2, h3, h4 {
     font-size: 2.5rem;
     margin-bottom: 30px;
     text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.sectionTitle::after {
+    content: '';
+    display: block;
+    width: 60%;
+    height: 4px;
+    background: #3498db;
+    position: absolute;
+    left: 20%;
+    bottom: -10px;
+    transform: translateX(-100%);
+    animation: slideIn 0.5s forwards;
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
 }
 
 .sectionText {
     font-size: 1.25rem;
-    text-align: center;
     line-height: 1.6;
     color: #7f8c8d;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .grid {
@@ -29,19 +56,24 @@ h2, h3, h4 {
     gap: 25px;
     margin-top: 20px;
 }
-
+a:hover {
+    color: #094269;
+    text-decoration: none;
+    transition: color 0.3s;
+}
 .lenguaje, .servicio, .proyecto {
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     padding: 20px;
     text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
 }
 
 .lenguaje:hover, .servicio:hover, .proyecto:hover {
     transform: translateY(-10px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    background-color: #f8f8f8;
 }
 
 .colorFondo {
@@ -54,17 +86,38 @@ h2, h3, h4 {
 .azul { background-color: #3498db; }
 .amarillo { background-color: #f1c40f; }
 .purpura { background-color: #9b59b6; }
-.verde { background-color: #2ecc71; }
 .rojo { background-color: #e74c3c; }
-.negro { background-color: #34495e; }
+.verde { background-color: #2ecc71; }
+
+.link {
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: none;
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.link:hover {
+    background-color: #2980b9;
+}
+
+.redes {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
 
 .redes a {
-    margin-right: 15px;
-    font-size: 2.5rem;
-    color: #333;
-    transition: color 0.3s;
+    font-size: 2rem;
+    transition: color 0.3s ease;
+    text-decoration: none;
 }
 
 .redes a:hover {
-    color: #3498db;
+    color: #2980b9;
 }
+

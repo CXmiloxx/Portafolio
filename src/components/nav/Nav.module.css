@@ -1,6 +1,6 @@
-.barra-navegacion {
-    background-color: #000;
+.barraNavegacion {
     position: fixed;
+    background-color: black;
     width: 100%;
     top: 0;
     left: 0;
@@ -8,8 +8,8 @@
     transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
-.barra-navegacion.scrolled {
-    background-color: rgba(0, 0, 0, 0.85);
+.scrolled {
+    background-color: rgba(255, 0, 0, 0.85);
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.5);
 }
 
@@ -17,7 +17,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 30px;
+    padding: 1px 30px;
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -43,44 +43,44 @@
 }
 
 .enlace:hover {
-    background-color: #08743b;
+    background-color: #720712; 
     transform: scale(1.1);
 }
 
-.menu-toggle {
+.menuToggle {
     display: none;
 }
 
-.menu-icon {
+.menuIcon {
     display: none;
     flex-direction: column;
     cursor: pointer;
     gap: 5px;
 }
 
-.menu-icon span {
+.menuIcon span {
     width: 25px;
     height: 2px;
     background-color: white;
     transition: all 0.3s ease;
 }
 
-.menu-toggle:checked + .menu-icon span:nth-child(1) {
+.menuToggle:checked + label.menuIcon span:nth-child(1) {
     transform: rotate(45deg) translate(5px, 5px);
 }
 
-.menu-toggle:checked + .menu-icon span:nth-child(2) {
+.menuToggle:checked + label.menuIcon span:nth-child(2) {
     opacity: 0;
 }
 
-.menu-toggle:checked + .menu-icon span:nth-child(3) {
+.menuToggle:checked + label.menuIcon span:nth-child(3) {
     transform: rotate(-45deg) translate(5px, -5px);
 }
 
-.menu-toggle:checked ~ .enlaces {
+.menuToggle:checked ~ .enlaces {
     display: flex;
     flex-direction: column;
-    background-color: rgba(0, 0, 0, 0.95);
+    background-color: rgba(14, 13, 13, 0.95);
     position: absolute;
     top: 100%;
     left: 0;
@@ -90,7 +90,7 @@
 }
 
 @media (max-width: 768px) {
-    .menu-icon {
+    .menuIcon {
         display: flex;
     }
 

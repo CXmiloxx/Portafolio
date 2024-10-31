@@ -1,100 +1,124 @@
 /* eslint-disable react/prop-types */
 import styles from './Body.module.css';
-import { FaJava, FaHtml5, FaCss3Alt, FaJs, FaGithub, FaLinkedin, FaLaravel } from 'react-icons/fa';
-import { SiC, SiPhp } from 'react-icons/si';
+import { FaJava, FaHtml5, FaCss3Alt, FaJs, FaGithub, FaLinkedin, FaLaravel, FaFacebookF } from 'react-icons/fa';
+import { SiPhp } from 'react-icons/si';
 import { DiReact } from 'react-icons/di';
 
 function Body() {
     return (
         <div className={styles.bodyContainer}>
-            <section className={styles.section} id="seccion-sobre-mi">
-                <h2 className={styles.sectionTitle}>Sobre mí</h2>
+            <Section title="Sobre mí" id="seccion-sobre-mi">
                 <p className={styles.sectionText}>
-                    ¡Hola! Soy Juan Camilo, desarrollador en formación con experiencia en Java, C, HTML, CSS, JavaScript y PHP. 
+                    ¡Hola! Soy Juan Camilo, desarrollador en formación con experiencia en Java,HTML, CSS, JavaScript y PHP. 
                     Apasionado por la tecnología, disfruto creando aplicaciones innovadoras. Me gusta explorar nuevas culturas y deportes. 
                     Estoy listo para contribuir al desarrollo de software con soluciones frescas e impactantes.
                 </p>
-            </section>
+            </Section>
 
-            <section className={styles.section} id="lenguajes">
-                <h2 className={styles.sectionTitle}>Lenguajes de Programación</h2>
-                <div className={styles.grid}>
-                    <Lenguaje icon={<FaJs />} nombre="JavaScript" descripcion="Lenguaje para interactividad en la web." />
-                    <Lenguaje icon={<FaJava />} nombre="Java" descripcion="Orientado a objetos, ideal para apps empresariales." />
-                    <Lenguaje icon={<SiC />} nombre="C" descripcion="Eficiente y usado en sistemas de bajo nivel." />
-                    <Lenguaje icon={<SiPhp />} nombre="PHP" descripcion="Backend para contenido dinámico en la web." />
-                </div>
-            </section>
+            <Section title="Lenguajes de Programación" id="lenguajes">
+                <LanguageGrid languages={[
+                    { icon: <FaJs />, name: "JavaScript", description: "Lenguaje para interactividad en la web." },
+                    { icon: <FaJava />, name: "Java", description: "Orientado a objetos, ideal para apps empresariales." },
+                    { icon: <SiPhp />, name: "PHP", description: "Backend para contenido dinámico en la web." },
+                ]} />
+            </Section>
 
-            <section className={styles.section} id="maquetacion-estilos">
-                <h2 className={styles.sectionTitle}>Lenguajes de Maquetación y Estilo</h2>
-                <div className={styles.grid}>
-                    <Lenguaje icon={<FaHtml5 />} nombre="HTML" descripcion="Estructura de páginas web." />
-                    <Lenguaje icon={<FaCss3Alt />} nombre="CSS" descripcion="Estilos y diseño de sitios web." />
-                </div>
-            </section>
+            <Section title="Lenguajes de Maquetación y Estilo" id="maquetacion-estilos">
+                <LanguageGrid languages={[
+                    { icon: <FaHtml5 />, name: "HTML", description: "Estructura de páginas web." },
+                    { icon: <FaCss3Alt />, name: "CSS", description: "Estilos y diseño de sitios web." },
+                ]} />
+            </Section>
 
-            <section className={styles.section} id="frameworks">
-                <h2 className={styles.sectionTitle}>Frameworks y Librerías</h2>
-                <div className={styles.grid}>
-                    <Lenguaje icon={<DiReact />} nombre="React" descripcion="Biblioteca para interfaces de usuario dinámicas." />
-                    <Lenguaje icon={<FaLaravel />} nombre="Laravel" descripcion="Framework PHP para desarrollo web robusto." />
-                </div>
-            </section>
+            <Section title="Frameworks y Librerías" id="frameworks">
+                <LanguageGrid languages={[
+                    { icon: <DiReact />, name: "React", description: "Biblioteca para interfaces de usuario dinámicas." },
+                    { icon: <FaLaravel />, name: "Laravel", description: "Framework PHP para desarrollo web robusto." },
+                ]} />
+            </Section>
 
-            <section className={styles.section} id="seccion-servicios">
-                <h2 className={styles.sectionTitle}>Servicios</h2>
-                <div className={styles.grid}>
-                    <Servicio color="azul" titulo="Análisis y Documentación" descripcion="Aplicación de principios SOLID." />
-                    <Servicio color="amarillo" titulo="Diseño UI" descripcion="Interfaces intuitivas y estéticas." />
-                    <Servicio color="purpura" titulo="Desarrollo Web" descripcion="Sitios web funcionales y dinámicos." />
-                    <Servicio color="verde" titulo="Aplicaciones" descripcion="Apps conectadas a bases de datos." />
-                    <Servicio color="rojo" titulo="Api" descripcion="Creacion y consumo de Apis para aplicaciones." />
+            <Section title="Servicios" id="seccion-servicios">
+                <ServiceGrid services={[
+                    { color: "azul", title: "Análisis y Documentación", description: "Aplicación de principios SOLID." },
+                    { color: "amarillo", title: "Diseño UI", description: "Interfaces intuitivas y estéticas." },
+                    { color: "purpura", title: "Desarrollo Web", description: "Sitios web funcionales y dinámicos." },
+                    { color: "verde", title: "Aplicaciones", description: "Apps conectadas a bases de datos." },
+                    { color: "rojo", title: "Api", description: "Creación y consumo de APIs para aplicaciones." },
+                ]} />
+            </Section>
 
-                </div>
-            </section>
+            <Section title="Mis Proyectos" id="seccion-proyectos">
+                <ProjectGrid projects={[
+                    { color: "amarillo", title: "Glosario Español-Inglés", description: "Glosario interactivo para traducción de palabras.", link: "https://ingles.onrender.com/" },
+                    { color: "azul", title: "Tienda Virtual SoccerWorld", description: "E-commerce dedicado a productos de fútbol.", link: "https://ligamerch.onrender.com" },
+                    { color: "rojo", title: "Registro de Usuarios", description: "Aplicación CRUD para gestión de usuarios.", link: "https://crudapp-h37z.onrender.com" },
+                ]} />
+            </Section>
 
-            <section className={styles.section} id="seccion-proyectos">
-                <h2 className={styles.sectionTitle}>Mis Proyectos</h2>
-                <div className={styles.grid}>
-                    <Proyecto color="amarillo" titulo="Glosario Español-Inglés" descripcion="Glosario interactivo para traducción de palabras." link="https://ingles.onrender.com/" />
-                    <Proyecto color="azul" titulo="Tienda Virtual SoccerWorld" descripcion="E-commerce dedicado a productos de fútbol." link="https://ligamerch.onrender.com" />
-                    <Proyecto color="rojo" titulo="Registro de Usuarios" descripcion="Aplicación CRUD para gestión de usuarios." link="https://crudapp-h37z.onrender.com" />
-                </div>
-            </section>
-
-            <section className={styles.section} id="seccion-contacto">
-                <h2 className={styles.sectionTitle}>Contacto</h2>
-                <p className={styles.sectionText}>Teléfono: +573207512575 | Email: juancamilog9911@gmail.com</p>
+            <Section title="Contacto" id="seccion-contacto">
+                <p className={styles.sectionText}>Teléfono: +573207512575</p>
+                <a href="mailto:juancamilog9911@gmail.com" className={styles.sectionText}>Email: juancamilog9911@gmail.com</a>
                 <div className={styles.redes}>
-                    <a href="https://github.com/CXmiloxx" target="_blank" rel="noopener noreferrer"><FaGithub /></a>
-                    <a href="https://www.linkedin.com/in/juan-camilo-guapacha/" target="_blank" rel="noopener noreferrer"><FaLinkedin /></a>
+                    <a href="https://github.com/CXmiloxx" target="_blank" rel="noopener noreferrer"><FaGithub />Github</a>
+                    <a href="https://www.linkedin.com/in/camilo-guapacha-a6732b270/" target="_blank" rel="noopener noreferrer"><FaLinkedin />Linkedin</a>
+                    <a href="https://www.facebook.com/guxpacha?mibextid=ibOpuV" target="_blank" rel="noopener noreferrer"><FaFacebookF />Facebook</a>
                 </div>
-            </section>
+            </Section>
         </div>
     );
 }
 
-const Lenguaje = ({ icon, nombre, descripcion }) => (
+const Section = ({ title, id, children }) => (
+    <section className={styles.section} id={id}>
+        <h2 className={styles.sectionTitle}>{title}</h2>
+        {children}
+    </section>
+);
+
+const LanguageGrid = ({ languages }) => (
+    <div className={styles.grid}>
+        {languages.map(({ icon, name, description }, index) => (
+            <Language key={index} icon={icon} name={name} description={description} />
+        ))}
+    </div>
+);
+
+const Language = ({ icon, name, description }) => (
     <div className={styles.lenguaje}>
         {icon}
-        <span><strong>{nombre}:</strong> {descripcion}</span>
+        <span><strong>{name}:</strong> {description}</span>
     </div>
 );
 
-const Servicio = ({ color, titulo, descripcion }) => (
+const ServiceGrid = ({ services }) => (
+    <div className={styles.grid}>
+        {services.map(({ color, title, description }, index) => (
+            <Service key={index} color={color} title={title} description={description} />
+        ))}
+    </div>
+);
+
+const Service = ({ color, title, description }) => (
     <div className={styles.servicio}>
         <div className={`${styles.colorFondo} ${styles[color]}`}></div>
-        <h3>{titulo}</h3>
-        <p>{descripcion}</p>
+        <h3>{title}</h3>
+        <p>{description}</p>
     </div>
 );
 
-const Proyecto = ({ color, titulo, descripcion, link }) => (
+const ProjectGrid = ({ projects }) => (
+    <div className={styles.grid}>
+        {projects.map(({ color, title, description, link }, index) => (
+            <Project key={index} color={color} title={title} description={description} link={link} />
+        ))}
+    </div>
+);
+
+const Project = ({ color, title, description, link }) => (
     <div className={styles.proyecto}>
         <div className={`${styles.colorFondo} ${styles[color]}`}></div>
-        <h4>{titulo}</h4>
-        <p>{descripcion}</p>
+        <h4>{title}</h4>
+        <p>{description}</p>
         <a href={link} target="_blank" rel="noopener noreferrer" className={styles.link}>Abrir</a>
     </div>
 );

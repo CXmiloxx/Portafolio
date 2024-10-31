@@ -1,4 +1,4 @@
-import fondo from '../img/yo.jpg';
+import fondo from '../../assets/img-r.jpg';
 import styles from './Header.module.css';
 import cv from "../curriculum/Cv-Camilo.pdf";
 
